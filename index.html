@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImagePDF Toolkit - Professional Image & PDF Tools</title>
+    <meta name="description" content="Professional multi-tool Image and PDF Toolkit with advanced client-side processing. Convert, compress, resize images and create PDFs - all in your browser with complete privacy.">
+    <meta name="keywords" content="image converter, pdf tools, image compression, resize images, format converter, batch processing">
+    <meta name="author" content="ImagePDF Toolkit">
+    
+    <meta property="og:title" content="ImagePDF Toolkit - Professional Image & PDF Tools">
+    <meta property="og:description" content="Convert, compress, resize images and create PDFs entirely in your browser. 100% private, no uploads, lightning fast processing with 6+ professional tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techuhat.github.io/toolkit/">
+    <meta property="og:image" content="https://techuhat.github.io/toolkit/images/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://techuhat.github.io/toolkit/">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234F46E5'><path d='M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v10h14V7H5zm2 2h10v2H7V9zm0 4h6v2H7v-2z'/></svg>">
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="theme-transition bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
+    <div id="toast-container" class="fixed top-4 right-4 z-50 space-y-2 md:top-4 md:right-4 sm:top-24 sm:left-4 sm:right-4 sm:z-[100000] sm:transform-none sm:w-[calc(100vw-32px)]"></div>
+    
+    <div id="progress-container" class="fixed top-0 left-0 w-full h-1 z-40 hidden">
+        <div id="progress-bar" class="h-full progress-bar" style="width: 0%"></div>
+    </div>
+    
+    <nav class="glass-effect sticky top-0 z-30 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-xl flex items-center justify-center shadow-lg">
+                        <div class="relative">
+                            <i class="fas fa-file-pdf text-white text-lg"></i>
+                            <i class="fas fa-image text-blue-200 text-xs absolute -top-1 -right-1"></i>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">ImagePDF Toolkit</span>
+                        <span class="text-xs text-gray-500 dark:text-gray-400 font-medium">Professional Tools</span>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button onclick="scrollToSection('tools')" class="hidden md:block text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        Tools
+                    </button>
+                    <button onclick="scrollToSection('features')" class="hidden md:block text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        Features
+                    </button>
+                    <div class="toggleWrapper">
+                        <input type="checkbox" id="dn" />
+                        <label for="dn" class="toggle">
+                            <span class="toggle__handler">
+                                <span class="crater crater--1"></span>
+                                <span class="crater crater--2"></span>
+                                <span class="crater crater--3"></span>
+                            </span>
+                            <span class="star star--1"></span>
+                            <span class="star star--2"></span>
+                            <span class="star star--3"></span>
+                            <span class="star star--4"></span>
+                            <span class="star star--5"></span>
+                            <span class="star star--6"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="gradient-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                    Professional Image & PDF Tools
+                </h1>
+                <p class="text-xl md:text-2xl text-white opacity-90 mb-8 max-w-3xl mx-auto">
+                    Convert, compress, resize, and manipulate images and PDFs entirely in your browser. 
+                    No uploads, complete privacy, lightning fast.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="scrollToSection('tools')" class="btn-professional bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-tools mr-2"></i>
+                        Explore Tools
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Why Choose Our Toolkit?</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Advanced client-side processing with enterprise-grade features
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">6+</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">Professional Tools</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-green-600 mb-2">100%</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">Client-Side</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-purple-600 mb-2">∞</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">No Limits</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-orange-600 mb-2">0ms</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">Upload Time</div>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center scale-in">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl text-blue-600 dark:text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">100% Private</h3>
+                    <p class="text-gray-600 dark:text-gray-300">All processing happens in your browser. No uploads, no tracking.</p>
+                </div>
+                <div class="text-center scale-in" style="animation-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-2xl text-green-600 dark:text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Optimized algorithms for instant processing and conversion.</p>
+                </div>
+                <div class="text-center scale-in" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-layer-group text-2xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Batch Processing</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Handle multiple files simultaneously with smart optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="tools" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Professional Tools</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">Choose from our comprehensive suite of image and PDF tools</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer" onclick="openTool('image-to-pdf')">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 shadow-md"><i class="fas fa-file-pdf text-2xl text-white"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Image to PDF</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Convert single or multiple images to PDF with custom layouts</p>
+                    <div class="flex items-center text-blue-600 dark:text-blue-400 font-medium group"><span>Get Started</span><i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i></div>
+                </div>
+                <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer" onclick="openTool('pdf-to-images')">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-4 shadow-md"><i class="fas fa-images text-2xl text-white"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">PDF to Images</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Extract images from PDF files in various formats</p>
+                    <div class="flex items-center text-green-600 dark:text-green-400 font-medium group"><span>Get Started</span><i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i></div>
+                </div>
+                <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer" onclick="openTool('image-compressor')">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 shadow-md"><i class="fas fa-compress-alt text-2xl text-white"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Image Compressor</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Reduce file size while maintaining quality</p>
+                    <div class="flex items-center text-purple-600 dark:text-purple-400 font-medium group"><span>Get Started</span><i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i></div>
+                </div>
+                <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer" onclick="openTool('image-resizer')">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-4 shadow-md"><i class="fas fa-expand-arrows-alt text-2xl text-white"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Image Resizer</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Resize images to custom dimensions</p>
+                    <div class="flex items-center text-orange-600 dark:text-orange-400 font-medium group"><span>Get Started</span><i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i></div>
+                </div>
+                <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer" onclick="openTool('format-converter')">
+                    <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-4 shadow-md"><i class="fas fa-exchange-alt text-2xl text-white"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Format Converter</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Convert between JPG, PNG, WebP, AVIF, and more</p>
+                    <div class="flex items-center text-red-600 dark:text-red-400 font-medium group"><span>Get Started</span><i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i></div>
+                </div>
+                <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer" onclick="openTool('batch-processor')">
+                    <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 shadow-md"><i class="fas fa-layer-group text-2xl text-white"></i></div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Batch Processor</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Process multiple files with combined operations</p>
+                    <div class="flex items-center text-indigo-600 dark:text-indigo-400 font-medium group"><span>Get Started</span><i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="tool-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div id="tool-toast-container" class="absolute top-20 right-4 z-100 space-y-2"></div>
+            <div class="bg-white dark:bg-gray-800 rounded-xl max-w-5xl w-full max-h-[90vh]">
+                <div class="p-6 border-b dark:border-gray-700">
+                    <div class="flex justify-between items-center">
+                        <h2 id="tool-title" class="text-2xl font-bold">Tool Workspace</h2>
+                        <button onclick="closeTool()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="tool-content" class="p-6 overflow-y-auto" style="max-height: calc(90vh - 100px);">
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-xl flex items-center justify-center shadow-lg"><div class="relative"><i class="fas fa-file-pdf text-white text-lg"></i><i class="fas fa-image text-blue-200 text-xs absolute -top-1 -right-1"></i></div></div>
+                        <div class="flex flex-col"><span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">ImagePDF Toolkit</span><span class="text-xs text-gray-500 font-medium">Professional Tools</span></div>
+                    </div>
+                    <p class="text-gray-400">Professional image and PDF processing tools for modern workflows.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tools</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" onclick="openTool('image-to-pdf')" class="hover:text-white transition-colors">Image to PDF</a></li>
+                        <li><a href="#" onclick="openTool('pdf-to-images')" class="hover:text-white transition-colors">PDF to Images</a></li>
+                        <li><a href="#" onclick="openTool('image-compressor')" class="hover:text-white transition-colors">Image Compressor</a></li>
+                        <li><a href="#" onclick="openTool('image-resizer')" class="hover:text-white transition-colors">Image Resizer</a></li>
+                        <li><a href="#" onclick="openTool('format-converter')" class="hover:text-white transition-colors">Format Converter</a></li>
+                        <li><a href="#" onclick="openTool('batch-processor')" class="hover:text-white transition-colors">Batch Processor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 ImagePDF Toolkit. All rights reserved. Design by Tech U ❤️</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js" defer></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js" defer></script>
+
+</body>
+</html>
