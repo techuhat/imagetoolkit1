@@ -56,12 +56,11 @@
     <link rel="canonical" href="https://techuhat.github.io/toolkit/">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234F46E5'><path d='M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v10h14V7H5zm2 2h10v2H7V9zm0 4h6v2H7v-2z'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234F46E5'><path d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z M8.5 12.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z'/></svg>">
     
     <!-- PERFORMANCE: Use only minified, purged Tailwind CSS for used classes -->
     <link rel="stylesheet" href="styles.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     
  <style>
         .glass-effect {
@@ -723,7 +722,7 @@
             box-shadow: 0 12px 30px rgba(59, 130, 246, 0.2);
         }
         
-        .file-drop-zone.drag-over .fa-cloud-upload-alt {
+        .file-drop-zone.drag-over svg {
             animation: bounce 0.6s infinite;
             color: #3b82f6 !important;
         }
@@ -1273,8 +1272,8 @@
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-xl flex items-center justify-center shadow-lg">
                         <div class="relative">
-                            <i class="fas fa-file-pdf text-white text-lg"></i>
-                            <i class="fas fa-image text-blue-200 text-xs absolute -top-1 -right-1"></i>
+                            <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z M8.5 12.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
+                            <svg class="w-4 h-4 text-blue-200 absolute -top-1 -right-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z M8.5 12.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
                         </div>
                     </div>
                     <div class="flex flex-col">
@@ -1323,8 +1322,8 @@
                     No uploads, complete privacy, lightning fast.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick="scrollToSection('tools')" class="btn-professional bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
-                        <i class="fas fa-tools mr-2"></i>
+                    <button onclick="scrollToSection('tools')" class="btn-professional bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"/></svg>
                         Explore Tools
                     </button>
                 </div>
@@ -1365,7 +1364,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center scale-in">
                     <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-2xl text-blue-600 dark:text-blue-400"></i>
+                        <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l6 2.67v5.15c0 4.54-2.77 8.62-6 9.93-3.23-1.31-6-5.39-6-9.93V5.85l6-2.67z"/></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">100% Private</h3>
                     <p class="text-gray-600 dark:text-gray-300">All processing happens in your browser. No uploads, no tracking.</p>
@@ -1373,7 +1372,7 @@
                 
                 <div class="text-center scale-in" style="animation-delay: 0.1s;">
                     <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-bolt text-2xl text-green-600 dark:text-green-400"></i>
+                        <svg class="w-6 h-6 text-green-600 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78C8.48 10.94 10.42 7.54 13.01 3h1l-1 7h3.51c.4 0 .62.19.4.66C12.97 17.55 11 21 11 21z"/></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
                     <p class="text-gray-600 dark:text-gray-300">Optimized algorithms for instant processing and conversion.</p>
@@ -1381,7 +1380,7 @@
                 
                 <div class="text-center scale-in" style="animation-delay: 0.2s;">
                     <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-layer-group text-2xl text-purple-600 dark:text-purple-400"></i>
+                        <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Batch Processing</h3>
                     <p class="text-gray-600 dark:text-gray-300">Handle multiple files simultaneously with smart optimization.</p>
@@ -1404,78 +1403,82 @@
                 <!-- Image to PDF Tool -->
                 <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl" onclick="openTool('image-to-pdf')">
                     <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 shadow-md">
-                        <i class="fas fa-file-pdf text-2xl text-white"></i>
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7 3C5.9 3 5 3.9 5 5v14c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V8.4c0-.5-.2-1-.5-1.4l-3.5-3.5C14.6 3.2 14.1 3 13.6 3H7zm0 2h6v4h4v10H7V5zm8 .8L17.2 8H15V5.8z"/></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Image to PDF</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Convert single or multiple images to PDF with custom layouts</p>
                     <div class="flex items-center text-blue-600 dark:text-blue-400 font-medium group">
                         <span>Get Started</span>
-                        <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 12l-7.9 7.9 1.4 1.4 9.3-9.3-9.3-9.3-1.4 1.4z"/></svg>
                     </div>
                 </div>
                 
                 <!-- PDF to Images Tool -->
                 <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl" onclick="openTool('pdf-to-images')">
                     <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-4 shadow-md">
-                        <i class="fas fa-images text-2xl text-white"></i>
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">PDF to Images</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Extract images from PDF files in various formats</p>
                     <div class="flex items-center text-green-600 dark:text-green-400 font-medium group">
                         <span>Get Started</span>
-                        <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 12l-7.9 7.9 1.4 1.4 9.3-9.3-9.3-9.3-1.4 1.4z"/></svg>
                     </div>
                 </div>
                 
                 <!-- Image Compressor Tool -->
                 <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl" onclick="openTool('image-compressor')">
                     <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 shadow-md">
-                        <i class="fas fa-compress-alt text-2xl text-white"></i>
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 9h1v1h1v1H4v-2zm17 0h-1v1h-1v1h2V9zM4 15h1v-1h1v-1H4v2zm17 0h-1v-1h-1v-1h2v2zM8 4v1H7v1h2V4H8zm9 0v1h1v1h1V4h-2zM8 20v-1H7v-1h2v2H8zm9 0v-1h1v-1h1v2h-2z"/></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Image Compressor</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Reduce file size while maintaining quality</p>
                     <div class="flex items-center text-purple-600 dark:text-purple-400 font-medium group">
                         <span>Get Started</span>
-                        <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                        </svg>
                     </div>
                 </div>
                 
                 <!-- Image Resizer Tool -->
                 <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl" onclick="openTool('image-resizer')">
                     <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-4 shadow-md">
-                        <i class="fas fa-expand-arrows-alt text-2xl text-white"></i>
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h6v2H5v4H3V3m2 16h4v2H3v-6h2v4m16 0v-4h2v6h-6v-2h4M19 3v2h-4V3h6v6h-2V5"/></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Image Resizer</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Resize images to custom dimensions</p>
                     <div class="flex items-center text-orange-600 dark:text-orange-400 font-medium group">
                         <span>Get Started</span>
-                        <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                        </svg>
                     </div>
                 </div>
                 
                 <!-- Format Converter Tool -->
                 <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl" onclick="openTool('format-converter')">
                     <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-4 shadow-md">
-                        <i class="fas fa-exchange-alt text-2xl text-white"></i>
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 17l5-5-5-5v3H8v4h8v3zM8 7l-5 5 5 5v-3h8v-4H8V7z"/></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Format Converter</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Convert between JPG, PNG, WebP, AVIF, and more</p>
                     <div class="flex items-center text-red-600 dark:text-red-400 font-medium group">
                         <span>Get Started</span>
-                        <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 12l-7.9 7.9 1.4 1.4 9.3-9.3-9.3-9.3-1.4 1.4z"/></svg>
                     </div>
                 </div>
                 
                 <!-- Batch Processor Tool -->
                 <div class="tool-card bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl" onclick="openTool('batch-processor')">
                     <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 shadow-md">
-                        <i class="fas fa-layer-group text-2xl text-white"></i>
+                        <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Batch Processor</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Process multiple files with combined operations</p>
                     <div class="flex items-center text-indigo-600 dark:text-indigo-400 font-medium group">
                         <span>Get Started</span>
-                        <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 12l-7.9 7.9 1.4 1.4 9.3-9.3-9.3-9.3-1.4 1.4z"/></svg>
                     </div>
                 </div>
             </div>
@@ -1492,7 +1495,7 @@
                     <div class="flex justify-between items-center">
                         <h2 id="tool-title" class="text-2xl font-bold">Tool Workspace</h2>
                         <button onclick="closeTool()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
-                            <i class="fas fa-times text-xl"></i>
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
                         </button>
                     </div>
                 </div>
@@ -1512,8 +1515,8 @@
                     <div class="flex items-center space-x-3 mb-4">
                         <div class="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-xl flex items-center justify-center shadow-lg">
                             <div class="relative">
-                                <i class="fas fa-file-pdf text-white text-lg"></i>
-                                <i class="fas fa-image text-blue-200 text-xs absolute -top-1 -right-1"></i>
+                                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z M8.5 12.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
+                                <svg class="w-4 h-4 text-blue-200 absolute -top-1 -right-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z M8.5 12.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
                             </div>
                         </div>
                         <div class="flex flex-col">
@@ -1548,15 +1551,15 @@
                 
                 <div>
                     <h4 class="font-semibold mb-4">Connect</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="text-gray-400 hover:text-white transition-all duration-200 hover:scale-110 inline-flex">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.8a8.49 8.49 0 0 1-2.36.64 4.13 4.13 0 0 0 1.81-2.27 8.21 8.21 0 0 1-2.61 1 4.1 4.1 0 0 0-7 3.74 11.64 11.64 0 0 1-8.45-4.29 4.16 4.16 0 0 0-.55 2.07 4.09 4.09 0 0 0 1.82 3.41 4.05 4.05 0 0 1-1.86-.51v.05a4.1 4.1 0 0 0 3.3 4 4.1 4.1 0 0 1-1.86.07 4.11 4.11 0 0 0 3.83 2.84A8.22 8.22 0 0 1 3 18.34a11.57 11.57 0 0 0 6.29 1.85A11.59 11.59 0 0 0 21 8.45v-.53A8.43 8.43 0 0 0 22 5.8z"/></svg>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-github text-xl"></i>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all duration-200 hover:scale-110 inline-flex">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.166 6.839 9.489.5.09.682-.218.682-.484 0-.236-.009-.866-.014-1.699-2.782.604-3.369-1.34-3.369-1.34-.455-1.157-1.11-1.465-1.11-1.465-.909-.62.069-.608.069-.608 1.004.071 1.532 1.03 1.532 1.03.891 1.529 2.341 1.089 2.91.833.091-.647.349-1.086.635-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.271.098-2.65 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .269.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all duration-200 hover:scale-110 inline-flex">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -1667,19 +1670,19 @@
                 toast.style.zIndex = '9999';
             }
             
-            const iconClass = type === 'success' ? 'fa-check-circle text-green-500' :
-                             type === 'error' ? 'fa-exclamation-circle text-red-500' :
-                             type === 'warning' ? 'fa-exclamation-triangle text-yellow-500' :
-                             'fa-info-circle text-blue-500';
+            const icon = type === 'success' ? '<svg class="w-6 h-6 text-green-500 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>' :
+                        type === 'error' ? '<svg class="w-6 h-6 text-red-500 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>' :
+                        type === 'warning' ? '<svg class="w-6 h-6 text-yellow-500 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>' :
+                        '<svg class="w-6 h-6 text-blue-500 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>';
             
             toast.innerHTML = `
                 <div class="flex items-center justify-between">
                     <div class="flex items-center flex-1">
-                        <i class="fas ${iconClass} mr-3 text-lg"></i>
+                        ${icon}
                         <span class="text-sm font-medium text-gray-900 dark:text-white">${message}</span>
                     </div>
                     <button onclick="dismissToast('${toastId}')" class="ml-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                        <i class="fas fa-times text-sm"></i>
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
                     </button>
                 </div>
                 <div class="absolute bottom-0 left-0 h-1 bg-gradient-to-r ${
@@ -1939,7 +1942,7 @@
                 overlay.className = 'fixed inset-0 bg-blue-600/20 backdrop-blur-sm z-50 flex items-center justify-center transition-all duration-300';
                 overlay.innerHTML = `
                     <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl border-4 border-dashed border-blue-500 text-center max-w-md mx-4 transform scale-95 hover:scale-100 transition-transform">
-                        <i class="fas fa-cloud-upload-alt text-6xl text-blue-500 mb-4 animate-bounce"></i>
+                        <svg class="w-16 h-16 text-blue-500 mb-4 animate-bounce" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                         <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Drop Files Here</h3>
                         <p class="text-gray-600 dark:text-gray-300">Release to add files to <span class="font-semibold text-blue-600">${getToolDisplayName()}</span></p>
                     </div>
@@ -2028,7 +2031,7 @@
             const commonFileInput = `
                 <div class="file-drop-zone rounded-xl p-8 text-center mb-6">
                     <div class="file-input-wrapper">
-                        <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
+                        <svg class="w-12 h-12 text-gray-400 mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
                         <p class="text-lg font-medium mb-2">Drag & drop files here</p>
                         <p class="text-gray-500 mb-4">or click to browse</p>
                         <button type="button" onclick="document.getElementById('file-input').click()" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
@@ -2177,11 +2180,11 @@
                 ${controls[toolName] || ''}
                 <div class="flex space-x-4">
                     <button id="process-btn" class="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
-                        <i class="fas fa-cog mr-2"></i>
+                        <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
                         Process Files
                     </button>
                     <button id="download-btn" class="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed hidden" disabled>
-                        <i class="fas fa-download mr-2"></i>
+                        <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
                         Download All
                     </button>
                 </div>
@@ -2333,7 +2336,9 @@
                             </div>
                         </div>
                         <button onclick="removeFile(${index})" class="btn-enhanced flex-shrink-0 ml-4 p-2 text-red-500 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-all duration-200">
-                            <i class="fas fa-times"></i>
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                            </svg>
                         </button>
                     `;
                     
@@ -2364,7 +2369,9 @@
                                     <img src="${e.target.result}" alt="${file.name}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
                                     <button class="remove-btn absolute top-2 right-2 w-8 h-8 bg-red-500 text-white rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200 hover:bg-red-600 hover:scale-110 flex items-center justify-center" onclick="event.stopPropagation(); removeFile(${index})">
-                                        <i class="fas fa-times text-xs"></i>
+                                        <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                        </svg>
                                     </button>
                                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                                         <div class="file-name text-white text-sm font-medium truncate">${file.name}</div>
@@ -2419,7 +2426,9 @@
                                     <p class="text-xs text-gray-500">${formatFileSize(file.size)}</p>
                                 </div>
                                 <button onclick="removeBatchFile(${index})" class="text-red-500 hover:text-red-700 p-1">
-                                    <i class="fas fa-times"></i>
+                                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
                                 </button>
                             </div>
                             
@@ -2458,9 +2467,9 @@
         }
         
         function getFileIcon(mimeType) {
-            if (mimeType.startsWith('image/')) return 'fa-image';
-            if (mimeType === 'application/pdf') return 'fa-file-pdf';
-            return 'fa-file';
+            if (mimeType.startsWith('image/')) return '<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/></svg>';
+            if (mimeType === 'application/pdf') return '<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm12 6V9c0-.55-.45-1-1-1h-2v5h2c.55 0 1-.45 1-1zm-2-3h1v3h-1V9zm4 2h-1v1h1v1h-2V9h2v1z"/></svg>';
+            return '<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/></svg>';
         }
         
         function formatFileSize(bytes) {
@@ -2487,7 +2496,7 @@
             
             // Enhanced button state with animation
             processBtn.disabled = true;
-            processBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing...';
+            processBtn.innerHTML = '<svg class="w-5 h-5 mr-2 animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Processing...';
             processBtn.classList.add('opacity-75', 'cursor-not-allowed');
             
             const startTime = Date.now();
@@ -2590,7 +2599,7 @@
                 
                 // Reset button state with animation
                 processBtn.disabled = false;
-                processBtn.innerHTML = '<i class="fas fa-cog mr-2"></i>Process Files';
+                processBtn.innerHTML = '<svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5a3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97c0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1c0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg>Process Files';
                 processBtn.classList.remove('opacity-75', 'cursor-not-allowed');
                 
                 if (processedFiles.length > 0) {
@@ -2855,7 +2864,9 @@
                         </div>
                     </div>
                     <button onclick="downloadSingleFile(${index})" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                        <i class="fas fa-download mr-1"></i>
+                        <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
                         Download
                     </button>
                 `;
